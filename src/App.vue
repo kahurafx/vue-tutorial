@@ -1,36 +1,22 @@
+<!-- html -->
+<template>
+    <div>
+        <Movie name="JJK" :likes="50" :isPublished="true" />
+        <Movie name="Kuroko no basuke" :likes="20" :isPublished="true" />
+        <Movie :likes="500" :isPublished="false" />
+    </div>
+</template>
+
+<!-- code -->
 <script>
+import Greet from "./components/Greet.vue";
+import Movie from "./components/Movie.vue";
+
 export default {
     name: "App",
-    data() {
-        return {
-            name: "BATMAN",
-            html: "<b>CROSS</b>",
-            isDisabled: true,
-            count: 0,
-            status: danger,
-        };
+    components: {
+        Greet,
+        Movie,
     },
 };
 </script>
-
-<template>
-    <div class="bg-red-600">I am {{ name }}</div>
-    <div v-html="html"></div>
-    <button :disabled="isDisabled">Hello</button>
-    <button @click="count++">Count : {{ count }}</button>
-    <ul class="status">
-        underlined
-    </ul>
-
-    <h2 :class="status">Status</h2>
-</template>
-
-<style>
-.underline {
-    text-decoration: underline;
-}
-
-.status {
-    text-decoration: double;
-}
-</style>
