@@ -1,22 +1,19 @@
 <!-- html -->
-<template>
-    <div>
-        <Movie name="JJK" :likes="50" :isPublished="true" />
-        <Movie name="Kuroko no basuke" :likes="20" :isPublished="true" />
-        <Movie :likes="500" :isPublished="false" />
-    </div>
+<template lang="">
+    <Card>
+        <template v-slot:default="props">
+            {{ props.firstName }} {{ props.lastName }}
+        </template>
+    </Card>
 </template>
 
 <!-- code -->
 <script>
-import Greet from "./components/Greet.vue";
-import Movie from "./components/Movie.vue";
+import Card from "./components/Card.vue";
 
 export default {
-    name: "App",
     components: {
-        Greet,
-        Movie,
+        Card,
     },
 };
 </script>
