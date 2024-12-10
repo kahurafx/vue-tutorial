@@ -1,19 +1,17 @@
-<!-- html -->
-<template lang="">
-    <Card>
-        <template v-slot:default="props">
-            {{ props.firstName }} {{ props.lastName }}
-        </template>
-    </Card>
+<template>
+    <div>
+        <PostList />
+    </div>
 </template>
 
-<!-- code -->
 <script>
-import Card from "./components/Card.vue";
+import PostList from "./components/PostList.vue";
 
 export default {
     components: {
-        Card,
+        PostList,
     },
 };
 </script>
+
+<!-- https://jsonplaceholder.typicode.com/posts -->
